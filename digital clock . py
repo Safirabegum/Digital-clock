@@ -1,0 +1,17 @@
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+
+top = Tk()
+top.title("Digital Clock")  # Fixed the typo from 'tittle' to 'title'
+
+def none():
+    text = strftime('%H:%M:%S %p')
+    lbl.config(text=text)  # Fixed the typo from 'confg' to 'config'
+    lbl.after(1000, none)
+
+lbl = Label(top, font=('digital - 7', 50, 'bold'),
+            background='black', foreground='red')
+lbl.pack(anchor='center')  # Fixed 'centre' to 'center'
+none()
+mainloop()
